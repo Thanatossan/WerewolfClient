@@ -42,6 +42,7 @@ namespace WerewolfClient
                         if (wm.EventPayloads["Success"] == "True")
                         {
                             MessageBox.Show("Sign up successfuly, please login", "Success", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                       
                         }
                         else
                         {
@@ -71,6 +72,11 @@ namespace WerewolfClient
             wcmd.Action = WerewolfCommand.CommandEnum.SignUp;
             wcmd.Payloads = new Dictionary<string, string>() { { "Login", TbLogin.Text}, { "Password",TbPassword.Text}, { "Server", TBServer.Text } };
             controller.ActionPerformed(wcmd);
+        }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -8,6 +8,7 @@ namespace WerewolfClient
 {
     public class WerewolfCommand : Command
     {
+        
         public new enum CommandEnum
         {
             SignUp = 1,
@@ -50,7 +51,7 @@ namespace WerewolfClient
                         case WerewolfCommand.CommandEnum.SignUp:
                             wm.SignUp(cmd.Payloads["Server"], cmd.Payloads["Login"], cmd.Payloads["Password"]);
                             break;
-
+                       
                         case WerewolfCommand.CommandEnum.SignIn:
                             wm.SignIn(cmd.Payloads["Server"], cmd.Payloads["Login"], cmd.Payloads["Password"]);
                             break;

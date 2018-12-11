@@ -31,7 +31,7 @@ namespace WerewolfClient
         private int _currentTime;
         private List<Player> _players = null;
         public List<Player> Players { get => _players; }
-
+ 
         public const string TRUE = "True";
         public const string FALSE = "False";
          
@@ -343,7 +343,7 @@ namespace WerewolfClient
                 _player = playerEP.AddPlayer(p);
                 
                 Console.WriteLine(_player.Id);
-                _event = EventEnum.SignIn;
+                _event = EventEnum.SignUp;
                 _eventPayloads["Success"] = TRUE;
             } catch (Exception ex)
             {
